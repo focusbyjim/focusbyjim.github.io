@@ -13,6 +13,10 @@
             font-family:Arial, Helvetica, sans-serif;
         }
 
+        html{
+            scroll-behavior:smooth;
+        }
+
         body{
             background:#111;
             color:white;
@@ -26,17 +30,17 @@
             align-items:center;
             text-align:center;
             background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-            url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1600&q=80");
+            url("https://images.unsplash.com/photo-1516035069371-33534b4b7e36?auto=format&fit=crop&w=1600&q=80");
             background-size:cover;
             background-position:center;
         }
 
         h1{
             font-size:4rem;
+            margin-bottom:15px;
         }
 
         p{
-            margin-top:15px;
             font-size:1.2rem;
             color:#ddd;
         }
@@ -49,10 +53,21 @@
             text-decoration:none;
             border-radius:30px;
             font-weight:bold;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#ddd;
         }
 
         section{
             padding:80px 10%;
+        }
+
+        h2{
+            margin-bottom:30px;
+            text-align:center;
+            font-size:2rem;
         }
 
         .gallery{
@@ -77,6 +92,7 @@
             text-align:center;
             padding:30px;
             color:#aaa;
+            border-top:1px solid #333;
         }
     </style>
 
@@ -84,32 +100,37 @@
 <body>
 
 <header>
+
     <h1>Frames by Jim</h1>
+
     <p>Capturing moments. Creating memories.</p>
 
     <a href="#gallery" class="btn">View Gallery</a>
+
 </header>
 
 <section id="gallery">
 
-<h2 style="margin-bottom:30px;">Featured Photos</h2>
+    <h2>Featured Photos</h2>
 
-<div class="gallery">
+    <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Photo 1">
 
-<img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1516035069371-33534b4b7e36?auto=format&fit=crop&w=800&q=80" alt="Photo 2">
 
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Photo 3">
 
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Photo 4">
 
-</div>
+    </div>
 
 </section>
 
 <footer>
-© 2026 Frames by Jim
+
+    © 2026 Frames by Jim
+
 </footer>
 
 </body>
