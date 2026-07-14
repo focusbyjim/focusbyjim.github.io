@@ -113,6 +113,100 @@ url("images/main header.jpg");
         transform:translate(-50%,-5px);
     }
 
+}/* Navigation */
+
+#navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:22px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+#navbar.scrolled{
+
+    background:rgba(10,10,10,.92);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+
+}
+
+.logo{
+
+    font-size:1.5rem;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+#navbar ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+#navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+#navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+#navbar a:hover::after{
+
+    width:100%;
+
 }
     </style>
 
@@ -137,7 +231,7 @@ url("images/main header.jpg");
     </ul>
 
 </nav>
-<header>
+<header id="home">
 
     <div class="hero">
 
@@ -179,6 +273,24 @@ url("images/main header.jpg");
     © 2026 Frames by Jim
 
 </footer>
+<script>
 
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 50){
+
+        navbar.classList.add("scrolled");
+
+    }else{
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+</script>
 </body>
 </html>
