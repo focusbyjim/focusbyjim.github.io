@@ -280,16 +280,39 @@
 
     width:100%;
 
-    max-width:430px;
+    max-width:420px;
 
-    border-radius:18px;
+    aspect-ratio:4/5;
 
     object-fit:cover;
 
-    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    object-position:center;
+
+    border-radius:18px;
+
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+
+    transition:.45s ease;
 
 }
+.photo-frame{
 
+    padding:10px;
+
+    border:1px solid rgba(200,169,106,.35);
+
+    border-radius:24px;
+
+    display:inline-block;
+
+}
+.about-image img:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 40px 80px rgba(0,0,0,.55);
+
+}
 .about-content{
 
     flex:1;
@@ -878,15 +901,16 @@ url("images/main header.jpg");
 
 </div>
 </section>
-<section id="about">
+<div class="about-image">
 
-    <div class="about-image">
+    <div class="photo-frame">
 
-        <img src="images/about.jpg" alt="Jim">
+        <img src="images/about.jpg" alt="Jim Briones">
 
     </div>
 
-    <div class="about-content">
+</div>
+<div class="about-content">
 
         <p class="section-tag">
             ABOUT ME
