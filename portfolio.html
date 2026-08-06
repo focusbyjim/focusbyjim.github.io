@@ -265,6 +265,47 @@ column-count:1;
     color:#C8A96A;
 
 }
+    /* Counter */
+
+#counter{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:15px;
+
+    letter-spacing:3px;
+
+    font-family:Poppins,sans-serif;
+
+}
+
+/* Hide UI */
+
+.lightbox.hide-ui .close,
+.lightbox.hide-ui .prev,
+.lightbox.hide-ui .next,
+.lightbox.hide-ui #counter{
+
+    opacity:0;
+
+}
+
+.close,
+.prev,
+.next,
+#counter{
+
+    transition:.35s;
+
+}
 
 </style>
 
@@ -335,6 +376,8 @@ emotions, and places captured through my lens.
     <img id="lightbox-img">
 
     <span class="next">&#10095;</span>
+
+    <div id="counter"></div>
 
 </div>
 
