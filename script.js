@@ -1,3 +1,6 @@
+const counter = document.getElementById("counter");
+
+let hideTimer;
 const photos = document.querySelectorAll(".gallery img");
 
 const lightbox = document.getElementById("lightbox");
@@ -18,18 +21,34 @@ function showPhoto(index){
 
     lightboxImg.src = photos[current].src;
 
+    counter.textContent = (current + 1) + " / " + photos.length;
+
+}
+function showControls(){
+
+    lightbox.classList.remove("hide-ui");
+
+    clearTimeout(hideTimer);
+
+    hideTimer = setTimeout(()=>{
+
+        lightbox.classList.add("hide-ui");
+
+    },2500);
+
 }
 
 photos.forEach((photo,index)=>{
 
-    photo.addEventListener("click",()=>{
+photo.addEventListener("click",()=>{
 
-        lightbox.classList.add("active");
+    lightbox.classList.add("active");
 
-        showPhoto(index);
+    showPhoto(index);
 
-    });
+    showControls();
 
+});
 });
 
 closeBtn.onclick=()=>{
@@ -73,5 +92,10 @@ lightbox.addEventListener("click",(e)=>{
         closeBtn.click();
 
     }
+
+});
+lightbox.addEventListener("mousemove",()=>{
+
+    showControls();
 
 });
