@@ -158,6 +158,113 @@ column-count:1;
 }
 
 }
+    /* LIGHTBOX */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.95);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:9999;
+
+}
+
+.lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.lightbox img{
+
+    max-width:92%;
+
+    max-height:90%;
+
+    object-fit:contain;
+
+    transform:scale(.9);
+
+    transition:.35s;
+
+}
+
+.lightbox.active img{
+
+    transform:scale(1);
+
+}
+
+.close,
+.prev,
+.next{
+
+    position:absolute;
+
+    color:white;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.25s;
+
+}
+
+.close{
+
+    top:25px;
+
+    right:35px;
+
+}
+
+.prev{
+
+    left:35px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+.next{
+
+    right:35px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+.close:hover,
+.prev:hover,
+.next:hover{
+
+    color:#C8A96A;
+
+}
 
 </style>
 
@@ -217,6 +324,22 @@ emotions, and places captured through my lens.
 
 
 </div>
+    <!-- Lightbox -->
+
+<div id="lightbox" class="lightbox">
+
+    <span class="close">&times;</span>
+
+    <span class="prev">&#10094;</span>
+
+    <img id="lightbox-img">
+
+    <span class="next">&#10095;</span>
+
+</div>
+
+<script src="script.js"></script>
+
 
 </body>
 
