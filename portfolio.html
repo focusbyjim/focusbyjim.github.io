@@ -158,6 +158,33 @@ column-count:1;
 }
 
 }
+    @keyframes floatPhoto{
+
+    0%{
+
+        transform:translateY(0px) scale(1);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px) scale(1.01);
+
+    }
+
+    100%{
+
+        transform:translateY(0px) scale(1);
+
+    }
+
+}
+
+.lightbox.active img{
+
+    animation:floatPhoto 6s ease-in-out infinite;
+
+}
     /* LIGHTBOX */
 
 .lightbox{
@@ -352,6 +379,29 @@ column-count:1;
     opacity:0;
 
 }
+/* ==========================
+   BLURRED BACKGROUND
+========================== */
+
+#lightbox-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background-size:cover;
+
+    background-position:center;
+
+    filter:blur(35px);
+
+    transform:scale(1.2);
+
+    opacity:.45;
+
+    transition:.45s;
+
+}
 
 </style>
 
@@ -414,6 +464,8 @@ emotions, and places captured through my lens.
     <!-- Lightbox -->
 
 <div id="lightbox" class="lightbox">
+
+    <div id="lightbox-bg"></div>
 
     <span class="close">&times;</span>
 
