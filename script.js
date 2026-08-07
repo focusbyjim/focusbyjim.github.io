@@ -1,7 +1,5 @@
 const lightboxBg = document.getElementById("lightbox-bg");
-const counter = document.getElementById("counter");
 
-let hideTimer;
 const counter = document.getElementById("counter");
 
 let hideTimer;
