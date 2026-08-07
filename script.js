@@ -1,6 +1,9 @@
 const counter = document.getElementById("counter");
 
 let hideTimer;
+const counter = document.getElementById("counter");
+
+let hideTimer;
 const photos = document.querySelectorAll(".gallery img");
 
 const lightbox = document.getElementById("lightbox");
