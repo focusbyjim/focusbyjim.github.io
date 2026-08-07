@@ -1,3 +1,4 @@
+const lightboxBg = document.getElementById("lightbox-bg");
 const counter = document.getElementById("counter");
 
 let hideTimer;
@@ -24,7 +25,11 @@ function showPhoto(index){
 
     lightboxImg.src = photos[current].src;
 
-    counter.textContent = (current + 1) + " / " + photos.length;
+    lightboxBg.style.backgroundImage =
+        `url(${photos[current].src})`;
+
+    counter.textContent =
+        (current + 1) + " / " + photos.length;
 
 }
 function showControls(){
